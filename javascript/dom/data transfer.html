@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <fieldset >
+    <form>
+
+    Name : <input type="text" id="ansh">
+    <br>
+    <br>
+    Class : <input type="text" id="ansh1">
+    <br>
+    <br>
+    Roll no : <input type="number" id="ansh2">
+    <br>
+    <br>
+    Contact : <input type="number" id="ansh3">
+    <br>
+    <br>
+    Email : <input type="email" id="ansh4">
+    <br>
+    <br>
+    <br>
+      </form>
+      
+      <button onclick="mukul()">Submit</button>
+      </fieldset>
+      
+      <table border="1" cellspacing="0" cellpadding="10">
+           
+            <tr>
+              <th>student </th>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td id="ankur"></td>
+            </tr>
+            <tr  >
+              <td>Class</td>
+              <td id="ankur1"></td>
+            </tr>
+            <tr id >
+              <td>Roll no</td>
+              <td id="ankur2"></td>
+            </tr>
+            <tr>
+              <td>Contact</td>
+              <td id="ankur3"></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td id="ankur4"></td>
+            </tr>
+
+      </table>
+       <script>
+
+               
+         function mukul(){
+               var x = document.getElementById("ansh").value;
+               var y = document.getElementById("ansh1").value;
+               var z = document.getElementById("ansh2").value;
+               var a = document.getElementById("ansh3").value;
+               var b = document.getElementById("ansh4").value;
+                 
+
+               document.getElementById("ankur").innerHTML = x;
+               document.getElementById("ankur1").innerHTML = y;
+               document.getElementById("ankur2").innerHTML = z;
+               document.getElementById("ankur3").innerHTML = a;
+               document.getElementById("ankur4").innerHTML = b;
+         }
+
+
+
+       </script>
+      
+
+    
+</body>
+</html>

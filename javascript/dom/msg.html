@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <form onsubmit=" return validation()">
+
+    msg : <input type="text" id="msg">
+    <span id="msgError"></span>
+    <br>
+    <br>
+    <input type="submit">
+
+  </form>
+
+  <script>
+
+    function validation() {
+      var msg = document.getElementById("msg").value;
+      if (msg == "") {
+        document.getElementById("msgError").innerHTML = "msg is empty";
+        return false;
+      }
+      if( (msg.length < 10 ) || (msg.length > 10 )){
+        document.getElementById("msgError").innerHTML = "plese enter the msg more than 10 ";
+        return false;
+      }
+
+      else {
+        document.getElementById("msgError").innerHTML = "";
+        document.write("msg:" + msg);
+        return true;
+      }
+    }
+  </script>
+</body>
+
+</html>

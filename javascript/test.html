@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form onsubmit="return validation()">
+
+        name: <input type="text" id="name">
+        <span id="nameError"></span>
+        <br>
+        <br>
+        <input type="submit">
+        <br>
+        <br>
+        phone: <input type="number" id="phone">
+        <span id="phone"></span>
+        <br>
+        <br>
+        <input type="submit">
+        <br>
+        <br>
+        email: <input type="email" id="email">
+        <span id="emailError"></span>
+        <br>
+        <br>
+        <input type="submit">
+
+    </form>
+
+
+    <script>
+        function validation() {
+            var name = document.getElementById("name").value;
+            if (name == "") {
+                document.getElementById("nameError").innerHTML = "name is empty";
+                return false;
+            } else {
+                document.getElementById("nameError").innerHTML = "";
+                document.write("name" + name);
+                return true
+            }
+        }
+
+    </script>
+</body>
+
+</html>

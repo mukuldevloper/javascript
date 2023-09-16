@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+            //    without function use to print data print
+                     
+            // var first_name = prompt("enter first name")
+            // var second_name = prompt("enter second name")
+            // var father_name = prompt("enter father name")
+            // var clas = prompt("enter class name")
+            // var roll_no  = prompt("enter roll no ")
+            // var email = prompt("enter gmail id")
+            // var subject_name = parseInt(prompt("enter hindi marks"))
+            // var english = parseInt(prompt("enter english marks"))
+            // var scince_name = parseInt(prompt("enter scince marks"))
+            // var art_name = parseInt(prompt("enter art marks"))
+            // var ssc_name = parseInt(prompt("enter ssc marks"))
+            // var total =  subject_name+english+scince_name+art_name+ssc_name
+            
+           
+            // document.write(  ` Name :${first_name} ${second_name} <br> FATHER NAME : ${father_name} <br>
+            // CLASS : ${clas} <br> ROLL NO : ${roll_no} <br> EMAIL : ${email} <br> HINDI : ${subject_name} <br>
+            // ENGLISH : ${english} <br> SCINCE : ${scince_name} <br> ART : ${art_name} <br> SSC : ${ssc_name} <br>
+            // TOTAL : ${total} <br> `);
+                                    
+                            //   function use karke task print with perameeter       
+                              
+            function mukul(first_name, second_name,father_name,clas,roll_no,email,subject_name,english,
+            scince_name,art_name,ssc_name,total,percent,){
+
+
+                
+                document.write(  ` Name :${first_name}  ${second_name} <br> Father name : ${father_name}
+                <br> Clas : ${clas} <br> Roll no : ${roll_no} <br> email : ${email} <br> Hindi : ${subject_name}
+                <br> English : ${english} <br> Scince : ${scince_name} <br> Art : ${art_name} <br> Ssc : ${ssc_name}
+                <br> Total : ${total} <br> Persent : ${percent} <br> `)
+                if(percent > 90){
+                             document.write("A");
+                         }else if(percent > 80){
+                             document.write("B");
+                         }else if(percent > 70){
+                             document.write("C");
+                         }else if(percent > 30){
+                             document.write("D");
+                         }else{
+                             document.write("FAIL");
+                         }
+          
+            document.write("<br>")
+        
+}
+       
+           mukul("mukul","kumar","xyz","Bca","2300607283","mukultawar343@gmail.com","80","78","54","23","49",80+78+54+23+49,284/5,)
+
+
+    </script>
+</body>
+</html>

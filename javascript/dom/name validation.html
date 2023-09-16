@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+
+   <form onsubmit="return validation()">
+      Name:<input type="text" id="name">
+      <span id="NameError"></span>
+      <br>
+      <br>
+      <input type="submit">
+   </form>
+
+
+   <script>
+
+      function validation() {
+         var correct = /^[A-Za-z]+$/;
+         var name = document.getElementById("name").value;
+         if (name == "") {
+            document.getElementById("NameError").innerHTML = "Name is empty";
+            return false;
+         }
+         if (name.length < 3) {
+            document.getElementById("NameError").innerHTML = "please enter the more than 3 characters";
+            return false;
+         }
+         if (name.length > 20) {
+            document.getElementById("NameError").innerHTML = "plese enter the less than 20 characters";
+            return false;
+         }
+         if (name.match(correct)) {
+            document.getElementById("NameError").innerHTML = "please enter the only characters";
+            return false;  
+         }
+         else {
+            document.write("Name : " + name);
+            return true;
+         }
+      }
+
+   </script>
+</body>
+
+</html>

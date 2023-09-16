@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form onsubmit="return validation()">
+
+        Phone:<input type="number" id="phone">
+        <span id="phoneError"></span>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+
+
+
+    <script>
+        function validation() {
+
+            var phone = document.getElementById("phone").value;
+            if (phone == "") {
+                document.getElementById("phoneError").innerHTML = "phone is empty";
+                return false;
+            }
+            if (isNaN(phone)) {
+                document.getElementById("phoneError").innerHTML = "plese enter the number";
+                return false;
+            }
+            if (phone.length < 10) {
+                document.getElementById("phoneError").innerHTML = "plese enter the number less than 10 ";
+                return false;
+            }
+            if (phone.length > 10) {
+                document.getElementById("phoneError").innerHTML = "please phone number is more than n10 characters";
+                return false;
+            }
+            if ((phone.charAt(0) != 9) && (phone.charAt(0) != 8) && (phone.charAt(0) != 7)) {
+                document.getElementById("phoneError").innerHTML = "phone number must be start within 91";
+                return false;
+            } else {
+                document.write("phone:" + phone);
+                return true;
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

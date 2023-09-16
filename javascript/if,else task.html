@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+
+        var first_name = "priya";
+        var last_name = "goswami";
+        var gmail = "riya@gmail.com";
+        var hindi = 50;
+        var english = 40;
+        var maths = 60;
+        var sst = 45;
+        var sci = 60;
+        var total = hindi + english + maths + sst + sci;
+        var percent = total / 5;
+
+        document.write(`NAME : ${first_name} ${last_name} <br> GMAIL : ${gmail} <br> HINDI : ${hindi} <br> ENGLISH : ${english} <br> MATHS : ${maths} <br> SST : ${sst} <br> SCIENCE : ${sci} <br> TOTAL :${total} <br> PERCENTAGE : ${percent} <br>`);
+        if (percent > 90) {
+            document.write("A");
+        } else if (percent > 80) {
+            document.write("B");
+        } else if (percent > 70) {
+            document.write("C");
+        } else if (percent > 60) {
+            document.write("D");
+        } else {
+            document.write("FAIL");
+        }
+
+
+    </script>
+
+</body>
+
+</html>

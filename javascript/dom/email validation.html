@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form onsubmit=" return validation()">
+    email: <input type="email" id="email">
+    <span id="ansh1"></span>
+    <br>
+    <br>
+    <input type="submit">
+
+  </form>
+
+
+
+
+  <script>
+
+    function validation() {
+      var email = document.getElementById("email").value;
+      if (email == "") {
+        document.getElementById("ansh1").innerHTML = "email is empty";
+        return false;
+      }
+      if (email.indexOf('@') <= 0) {
+        document.getElementById("ansh1").innerHTML = "email is not @";
+        return false;
+      }
+      if ((email.charAt(email.length - 4) != ".") && (email.charAT(email.length - 3) != ".")) {
+        document.getElementById("ansh1").innerHTML = "invalid. position";
+        return false;
+      }
+      else {
+        document.getElementById("ansh1").innerHTML = "";
+        document.write("email :" + email);
+        return true;
+      }
+    }
+
+  </script>
+
+
+</body>
+
+</html>

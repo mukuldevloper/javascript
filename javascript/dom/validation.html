@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <form action="" onsubmit="return validation()">
+    Email : <input type="email" id="mukul">
+    <span id="mukul1"></span>
+    <br>
+    <br>
+    <input type="submit">
+  </form>
+  <br>
+  <br>
+  <form action="" onsubmit="return validation1()">
+    Number : <input type="number" id="ansh">
+    <span id="ansh1"></span>
+    <br>
+    <br>
+    <input type="submit">
+  </form>
+  <br>
+  <br>
+  <form action="" onsubmit="return validation2()">
+    Password : <input type="password" id="vansh">
+    <span id="vansh1"></span>
+    <br>
+    <br>
+    <input type="submit">
+  </form>
+
+
+
+
+  <script>
+
+
+    function validation() {
+      var Email = document.getElementById("mukul").value;
+      if (Email == "") {
+        document.getElementById("mukul1").innerHTML = "Email is empty"
+        return false;
+      } else {
+        document.getElementById("mukul1").innerHTML = "";
+        document.write("email :" + email);
+        return true;
+
+      }
+    }
+
+    function validation1() {
+      var Number = document.getElementById("ansh").value;
+      if (Number == "") {
+        document.getElementById("ansh1").innerHTML = "number is empty"
+        return false;
+      } else {
+        document.getElementById("ansh1").innerHTML = "";
+        document.write("Number :" + number);
+        return true;
+
+      }
+    }
+
+    function validation2() {
+      var Password = document.getElementById("vansh").value;
+      if (Password == "") {
+        document.getElementById("vansh1").innerHTML = "Password is empty"
+        return false;
+      } else {
+        document.getElementById("vansh1").innerHTML = "";
+        document.write("Password :" + Password);
+        return true;
+
+      }
+    }  
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

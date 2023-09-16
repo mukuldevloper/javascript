@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <form action="" onsubmit="return validation()">
+
+        Name:<input type="text" id="name">
+        <span id="nameError"></span>
+        <br>
+        <br>
+        Phone:<input type="number" id="phone">
+        <span id="phoneError"></span>
+        <br>
+        <br>
+        Clas:<input type="text" id="clas">
+        <span id="clasError"></span>
+        <br>
+        <br>
+        Address:<input type="text" id="Address">
+        <span id="AddressError"></span>
+        <br>
+        <br>
+        City:<input type="text" id="city">
+        <span id="cityError"></span>
+        <br>
+        <br>
+        <input type="submit">
+
+    </form>
+
+
+    <script>
+
+        function validation() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var clas = document.getElementById("clas").value;
+            var Address = document.getElementById("Address").value;
+            var city = document.getElementById("city").value;
+            if (name == "") {
+                document.getElementById("nameError").innerHTML = "Name is empty";
+                return false;
+            } else if (phone == "") {
+                document.getElementById("phoneError").innerHTML = "Phone is empty";
+                return false;
+            } else if (clas == "") {
+                document.getElementById("clasError").innerHTML = "clas is empty";
+                return false;
+            } else if (Address == "") {
+                document.getElementById("AddressError").innerHTML = "Address is empty";
+                return false;
+            } else if (city == "") {
+                document.getElementById("cityError").innerHTML = "city is empty";
+                return false;
+            } else {
+                document.getElementById("nameError").innerHTML = "";
+                document.getElementById("phoneError").innerHTML = "";
+                document.getElementById("clasError").innerHTML = "";
+                document.getElementById("AddressError").innerHTML = "";
+                document.getElementById("cityError").innerHTML = "";
+                document.write("Name :" + name + "<br>");
+                document.write("Phone :" + phone + "<br>");
+                document.write("Clas :" + clas + "<br>");
+                document.write("Address :" + Address + "<br>");
+                document.write("city :" + city);
+                return true;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
